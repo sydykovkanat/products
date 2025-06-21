@@ -1,0 +1,38 @@
+export const SITE_NAME = 'Moon';
+
+export const SITE_DESCRIPTION = `${SITE_NAME} - все лучшие товары в одном месте`;
+
+export const SITE_KEYWORDS = [
+	'moon',
+	'moon shop',
+	'moon store',
+	'moon products',
+	'moon goods',
+	'moon online store',
+	'moon online shop',
+	'moon ecommerce',
+	'moon marketplace',
+	'moon shopping',
+	'moon buy',
+	'moon sale',
+	'moon deals',
+	'moon offers',
+	'moon discounts',
+	'moon fashion',
+	'moon electronics',
+	'moon home',
+	'moon beauty',
+	'moon health',
+	'moon sports',
+	'moon toys',
+	'moon books',
+	'moon groceries',
+	'moon furniture',
+	'moon accessories',
+	'moon gifts',
+	'moon lifestyle',
+	'moon trends',
+	'moon quality',
+	'moon affordable',
+	'moon reliable',
+];
