@@ -51,7 +51,7 @@ export function CartProductCard({ product }: Props) {
 
 	return (
 		<Card className='shadow-none'>
-			<CardContent className='flex items-center gap-4'>
+			<CardContent className='flex flex-col gap-4 sm:flex-row xl:items-center'>
 				<img
 					src={product.image}
 					alt={product.title}

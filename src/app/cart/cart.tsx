@@ -21,16 +21,16 @@ export function Cart() {
 	return (
 		<Container borderX className='relative h-full grow py-4'>
 			{cartItems.length > 0 ? (
-				<div className='flex gap-8'>
-					<div className='w-2/3'>
+				<div className='flex flex-col gap-8 xl:flex-row'>
+					<div className='xl:w-2/3'>
 						<CartProductsList products={cartItems} />
 					</div>
 
-					<div className='sticky top-21 h-max w-1/3'>
+					<div className='sticky top-21 h-max xl:w-1/3'>
 						<h2 className='mb-2 text-lg font-medium'>Информация о корзине</h2>
 
 						<div className='bg-secondary rounded-xl p-4'>
-							<div className='mb-4 flex items-center justify-between border-b'>
+							<div className='items mb-4 flex justify-between border-b'>
 								<span className='text-muted-foreground text-sm'>
 									Товары в корзине
 								</span>
