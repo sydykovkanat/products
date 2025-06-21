@@ -11,7 +11,7 @@ export function Container({ className, borderX = false, children }: Props) {
 	return (
 		<div
 			className={cn(
-				'mx-auto max-w-7xl px-4',
+				'mx-auto w-full max-w-7xl px-4',
 				{
 					'border-x border-dashed': borderX,
 				},

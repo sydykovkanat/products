@@ -2,7 +2,7 @@ import { HomeIcon, PackageIcon, ShoppingCartIcon } from 'lucide-react';
 
 export const PAGES = {
 	HOME: {
-		path: '/home',
+		path: '/',
 		title: 'Главная',
 		description: 'Добро пожаловать на главную страницу нашего сайта',
 		icon: HomeIcon,
@@ -20,7 +20,7 @@ export const PAGES = {
 		icon: PackageIcon,
 	},
 	PRODUCT: {
-		path: (id: string) => `/products/${id}`,
+		path: (id: number) => `/products/${id}`,
 		title: 'Товар',
 		description: 'Информация о товаре',
 		icon: PackageIcon,

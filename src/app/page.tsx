@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 
 import { Container } from '@/shared/components/shared';
+import { PAGES } from '@/shared/configs';
 
 export const metadata: Metadata = {
-	title: 'Главная',
-	description: 'Главная страница приложения',
+	title: PAGES.HOME.title,
+	description: PAGES.HOME.description,
 };
 
 export default function Page() {
