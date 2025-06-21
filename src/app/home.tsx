@@ -5,7 +5,7 @@ import { useGetProducts } from '@/features/products/hooks';
 
 import { Container } from '@/shared/components/shared';
 
-export function Products() {
+export function Home() {
 	const { products, isProductsLoading } = useGetProducts();
 
 	return (

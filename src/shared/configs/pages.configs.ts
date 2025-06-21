@@ -1,4 +1,4 @@
-import { HomeIcon, PackageIcon, ShoppingCartIcon } from 'lucide-react';
+import { HomeIcon, ShoppingCartIcon } from 'lucide-react';
 
 export const PAGES = {
 	HOME: {
@@ -12,17 +12,5 @@ export const PAGES = {
 		title: 'Корзина',
 		description: 'Ваша корзина покупок',
 		icon: ShoppingCartIcon,
-	},
-	PRODUCTS: {
-		path: '/products',
-		title: 'Товары',
-		description: 'Каталог товаров',
-		icon: PackageIcon,
-	},
-	PRODUCT: {
-		path: (id: number) => `/products/${id}`,
-		title: 'Товар',
-		description: 'Информация о товаре',
-		icon: PackageIcon,
 	},
 };

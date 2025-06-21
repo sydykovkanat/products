@@ -12,12 +12,6 @@ export function NavMenu() {
 					title={PAGES.HOME.title}
 					icon={PAGES.HOME.icon}
 				/>
-
-				<NavMenuItem
-					path={PAGES.PRODUCTS.path}
-					title={PAGES.PRODUCTS.title}
-					icon={PAGES.PRODUCTS.icon}
-				/>
 			</NavigationMenuList>
 		</NavigationMenu>
 	);
