@@ -91,7 +91,7 @@ export function ProductCard({ product }: Props) {
 								variant={'outline'}
 								icon={MinusIcon}
 								onClick={decrementQuantity}
-								disabled={!hasHydrated || !cartItem || cartItem.quantity <= 1}
+								disabled={!hasHydrated || !cartItem}
 							/>
 
 							<p className='w-4 text-center text-lg'>
