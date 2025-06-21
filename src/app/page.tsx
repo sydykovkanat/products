@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { Button } from '@/shared/components/ui';
+import { Container } from '@/shared/components/shared';
 
 export const metadata: Metadata = {
 	title: 'Главная',
@@ -9,8 +9,13 @@ export const metadata: Metadata = {
 
 export default function Page() {
 	return (
-		<div>
-			<Button>Кнопка</Button>
-		</div>
+		<Container borderX className='h-full grow py-4'>
+			<p>
+				Далеко-далеко, за словесными горами в стране гласных и согласных живут
+				рыбные тексты. Моей реторический предупредила которой грустный раз
+				вопрос использовало своих диких домах дороге безорфографичный великий
+				страну послушавшись заголовок, вершину от всех свою.
+			</p>
+		</Container>
 	);
 }
