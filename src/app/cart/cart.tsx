@@ -3,13 +3,20 @@
 import { ShoppingBasket } from 'lucide-react';
 
 import { CartProductsList, NoCartItems } from '@/features/cart/components';
-import { selectCartItems, useCartStore } from '@/features/cart/model';
+import {
+	selectCartItems,
+	selectTotalItems,
+	selectTotalPrice,
+	useCartStore,
+} from '@/features/cart/model';
 
 import { Container } from '@/shared/components/shared';
 import { Button } from '@/shared/components/ui';
 
 export function Cart() {
 	const cartItems = useCartStore(selectCartItems);
+	const totalItems = useCartStore(selectTotalItems);
+	const totalPrice = useCartStore(selectTotalPrice);
 
 	return (
 		<Container borderX className='relative h-full grow py-4'>
@@ -27,30 +34,29 @@ export function Cart() {
 								<span className='text-muted-foreground text-sm'>
 									Товары в корзине
 								</span>
-								<span className='text-lg font-medium'>
-									{cartItems.length} шт.
-								</span>
+								<span className='text-lg font-medium'>{totalItems} шт.</span>
 							</div>
 
-							{cartItems.map((item) => (
-								<div
-									key={item.id}
-									className='mb-2 flex items-center justify-between border-b pb-2'
-								>
-									<span className='text-muted-foreground line-clamp-1 text-sm'>
-										{item.title}
-									</span>
-									<span className='text-sm text-nowrap'>
-										{item.price.toFixed(2)} сом
-									</span>
-								</div>
-							))}
+							{cartItems.map((item) => {
+								const itemTotalPrice = (item.price * item.quantity).toFixed(2);
+								return (
+									<div
+										key={item.id}
+										className='mb-2 flex items-center justify-between gap-x-6 border-b pb-2'
+									>
+										<span className='text-muted-foreground line-clamp-1 text-sm'>
+											{item.title}
+										</span>
+										<span className='text-sm text-nowrap'>
+											{itemTotalPrice} сом
+										</span>
+									</div>
+								);
+							})}
 							<div className='mb-4 flex items-center justify-between border-b'>
 								<span className='text-muted-foreground text-sm'>Итого</span>
 								<span className='text-lg font-medium'>
-									{cartItems
-										.reduce((total, item) => total + item.price, 0)
-										.toFixed(2)}{' '}
+									{totalPrice.toFixed(2)}
 									сом
 								</span>
 							</div>
